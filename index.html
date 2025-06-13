@@ -8,18 +8,18 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #dfffe0;
+      background: #e0f7ff; /* azul celeste claro */
       color: #1b3e20;
       font-size: 20px;
     }
     header {
-      background-color: #87CEEB; /* azul celeste */
+      background-color: #4B0082; /* azul índigo */
       color: white;
       padding: 20px;
       text-align: center;
     }
     header img {
-      width: 200px; /* más grande */
+      width: 200px;
     }
     section {
       padding: 40px 20px;
@@ -71,10 +71,17 @@
       border-radius: 5px;
       cursor: pointer;
       font-size: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contacto button img {
+      width: 20px;
+      height: 20px;
     }
     footer {
       text-align: center;
-      background-color: #87CEEB; /* azul celeste */
+      background-color: #4B0082; /* azul índigo */
       color: white;
       padding: 20px;
       margin-top: 40px;
@@ -151,10 +158,14 @@
   <section class="contacto">
     <h2>Contáctanos</h2>
     <p><strong>Víctor Juarez - 5520883469</strong> 
-      <button onclick="window.open('https://wa.me/525520883469', '_blank')">WhatsApp</button>
+      <button onclick="window.open('https://wa.me/525520883469', '_blank')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo"> WhatsApp
+      </button>
     </p>
     <p><strong>Martínez Lucio - 5624783388</strong> 
-      <button onclick="window.open('https://wa.me/525624783388', '_blank')">WhatsApp</button>
+      <button onclick="window.open('https://wa.me/525624783388', '_blank')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo"> WhatsApp
+      </button>
     </p>
     <button class="boton volver" onclick="mostrarSeccion('principal')">← Regresar</button>
   </section>
