@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>All Stars - Fútbol</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #dfffe0;
+      color: #1b3e20;
+    }
+    header {
+      background-color: #065f46;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 100px;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #065f46;
+    }
+    .galeria img {
+      width: 250px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .frase {
+      font-style: italic;
+      margin: 20px 0;
+    }
+    .boton {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #059669;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .pagina {
+      display: none;
+    }
+    .activa {
+      display: block;
+    }
+    .contacto {
+      margin-top: 20px;
+    }
+    .contacto button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      background-color: #065f46;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+    .volver {
+      background-color: #3b82f6;
+      margin-top: 20px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "✔ ";
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<div id="principal" class="pagina activa">
+  <header>
+    <img src="img/logo-aguila.png" alt="Águila Logo">
+    <h1>All Stars</h1>
+  </header>
+
+  <section>
+    <h2>¿Quiénes somos?</h2>
+    <p>All Stars es un equipo de fútbol soccer formado por jugadores apasionados por el juego limpio, la técnica y el espíritu de equipo. Nuestra misión es formar leyendas del balón desde la cancha local hasta el nivel internacional.</p>
+  </section>
+
+  <section>
+    <h2>Galería del equipo</h2>
+    <div class="galeria">
+      <img src="img/equipo1.jpg" alt="Equipo 1">
+      <img src="img/equipo2.jpg" alt="Equipo 2">
+      <img src="img/equipo3.jpg" alt="Equipo 3">
+    </div>
+  </section>
+
+  <section>
+    <h2>Inspiración</h2>
+    <p class="frase">"El fútbol es un pensamiento que se juega, y más con la cabeza que con los pies." – Milan Kundera</p>
+  </section>
+
+  <section>
+    <h2>Únete a nosotros</h2>
+    <a class="boton" onclick="mostrarSeccion('registro')">Haz clic aquí</a>
+  </section>
+
+  <footer>
+    © 2025 Sánchez Juárez Víctor Gabriel · Martínez Flores Juan Lucio
+  </footer>
+</div>
+
+<div id="registro" class="pagina">
+  <header>
+    <img src="img/logo-aguila.png" alt="Águila Logo">
+    <h1>All Stars</h1>
+  </header>
+
+  <section>
+    <h2>Requisitos para unirte</h2>
+    <ul>
+      <li>Tener entre 8 y 17 años</li>
+      <li>Contar con experiencia en fútbol amateur</li>
+      <li>Pasión por el deporte y trabajo en equipo</li>
+      <li>Disponibilidad para entrenar 3 veces por semana</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contáctanos</h2>
+    <p>Víctor Juarez - 5520883469 
+      <button onclick="window.open('https://wa.me/525520883469', '_blank')">WhatsApp</button>
+    </p>
+    <p>Martinez Lucio - 5624783388 
+      <button onclick="window.open('https://wa.me/525624783388', '_blank')">WhatsApp</button>
+    </p>
+    <button class="boton volver" onclick="mostrarSeccion('principal')">← Regresar</button>
+  </section>
+
+  <footer>
+    © 2025 Sánchez Juárez Víctor Gabriel · Martínez Flores Juan Lucio
+  </footer>
+</div>
+
+<script>
+  function mostrarSeccion(id) {
+    document.querySelectorAll('.pagina').forEach(p => p.classList.remove('activa'));
+    document.getElementById(id).classList.add('activa');
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
